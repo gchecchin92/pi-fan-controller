@@ -36,8 +36,9 @@ if __name__ == '__main__':
     if OFF_THRESHOLD >= ON_THRESHOLD:
         raise RuntimeError('OFF_THRESHOLD must be less than ON_THRESHOLD')
 
-    fan = OutputDevice(GPIO_PIN)
-
+    #fan = OutputDevice(GPIO_PIN)
+    fan = OutputDevice(GPIO_PIN, False, False)
+    
     while True:
         temp = get_temp()
 
